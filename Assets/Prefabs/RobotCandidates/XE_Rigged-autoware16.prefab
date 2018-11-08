@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 114015003796329036}
   - component: {fileID: 114108280789314580}
   m_Layer: 8
-  m_Name: XE_Rigged-autoware
+  m_Name: XE_Rigged-autoware16
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12633,16 +12633,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetEnv: 1
-  numberOfLasers: 64
-  rotationSpeedHz: 10
+  numberOfLasers: 16
+  rotationSpeedHz: 5
   rotationAnglePerStep: 1
   publishInterval: 0.2
   rayDistance: 100
-  upperFOV: 10.66
+  upperFOV: 16
   lowerFOV: 16
   offset: 0.01
-  upperNormal: -3
-  lowerNormal: 16.33
+  upperNormal: 9
+  lowerNormal: 7
   lapTime: 0
   pointCloudObject: {fileID: 0}
   lineDrawerPrefab: {fileID: 1774473427590276, guid: 3cb54b6a7f70d3d44861517d3043b258,
