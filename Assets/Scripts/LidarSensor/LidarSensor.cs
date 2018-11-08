@@ -105,6 +105,8 @@ public class LidarSensor : MonoBehaviour, Ros.IRosClient
     private int[] pcIndices = new int[vertexLimitPerMesh];
     private int lastHitVertCount;
 
+    System.Random rnd = new System.Random();
+
     void Awake()
     {
         LidarBitmask = ~(1 << LayerMask.NameToLayer("Lidar Ignore") | 1 << LayerMask.NameToLayer("Sensor Effects")) | 1 << LayerMask.NameToLayer("Lidar Only") | 1 << LayerMask.NameToLayer("PlayerConstrain");
@@ -432,6 +434,12 @@ public class LidarSensor : MonoBehaviour, Ros.IRosClient
         for (int i = 0; i < pointCount; i++)
         {
             var local = sensorLocalspaceTransform.InverseTransformPoint(pointCloud[i].position);
+
+            Vector3 norm = local.normalized;
+            double sigma = 1.0;
+            float X = (float)(System.Math.Sqrt(-2.0 * System.Math.Log(rnd.NextDouble())) * System.Math.Cos(2.0 * System.Math.PI * rnd.NextDouble())) / 150.0f;
+            local = local + Vector3.Scale(new Vector3(X, X, X), norm);
+            
             if (targetEnv == ROSTargetEnvironment.AUTOWARE)
             {
                 local.Set(local.z, -local.x, local.y);
