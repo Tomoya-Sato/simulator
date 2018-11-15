@@ -12635,7 +12635,7 @@ MonoBehaviour:
   targetEnv: 1
   numberOfLasers: 32
   rotationSpeedHz: 10
-  rotationAnglePerStep: 1
+  rotationAnglePerStep: 0.4
   publishInterval: 0.2
   rayDistance: 100
   upperFOV: 21.28

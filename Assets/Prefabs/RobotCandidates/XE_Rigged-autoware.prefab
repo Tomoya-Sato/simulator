@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 114015003796329036}
   - component: {fileID: 114108280789314580}
   m_Layer: 8
-  m_Name: XE_Rigged-autoware
+  m_Name: XE_Rigged-autoware64
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12635,7 +12635,7 @@ MonoBehaviour:
   targetEnv: 1
   numberOfLasers: 64
   rotationSpeedHz: 10
-  rotationAnglePerStep: 1
+  rotationAnglePerStep: 0.3
   publishInterval: 0.2
   rayDistance: 100
   upperFOV: 10.66

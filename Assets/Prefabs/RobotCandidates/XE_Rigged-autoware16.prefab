@@ -12634,8 +12634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetEnv: 1
   numberOfLasers: 16
-  rotationSpeedHz: 5
-  rotationAnglePerStep: 1
+  rotationSpeedHz: 10
+  rotationAnglePerStep: 0.4
   publishInterval: 0.2
   rayDistance: 100
   upperFOV: 16
